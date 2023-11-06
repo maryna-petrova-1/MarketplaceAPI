@@ -2,6 +2,7 @@
 using MarketplaceAPI.Contracts.DataAccess.QueryProviders;
 using MarketplaceAPI.Contracts.Domain.Services;
 using MarketplaceAPI.Infrastructure.Models;
+using MarketplaceAPI.Infrastructure;
 
 namespace MarketplaceAPI.Domain.Services
 {
@@ -20,6 +21,13 @@ namespace MarketplaceAPI.Domain.Services
 
 			return auctions;
 		}
-	}
+
+        public async Task<IEnumerable<Auction>> GetAuctions(QueryObject queryObject)
+        {
+            var auctions = await _auctionsQueryProvider.Get(queryObject);
+
+            return auctions;
+        }
+    }
 }
 
