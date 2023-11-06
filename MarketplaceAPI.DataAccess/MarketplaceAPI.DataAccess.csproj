@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="QueryProviders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QueryProviders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarketplaceAPI.Data\MarketplaceAPI.Data.csproj" />
+    <ProjectReference Include="..\MarketplaceAPI.Contracts\MarketplaceAPI.Contracts.csproj" />
+  </ItemGroup>
+</Project>

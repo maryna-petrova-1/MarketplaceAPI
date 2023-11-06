@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Domain\" />
+    <None Remove="DataAccess\" />
+    <None Remove="DataAccess\QueryProviders\" />
+    <None Remove="Domain\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="DataAccess\" />
+    <Folder Include="DataAccess\QueryProviders\" />
+    <Folder Include="Domain\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarketplaceAPI.Data\MarketplaceAPI.Data.csproj" />
+    <ProjectReference Include="..\MarketplaceAPI.Infrastructure\MarketplaceAPI.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
