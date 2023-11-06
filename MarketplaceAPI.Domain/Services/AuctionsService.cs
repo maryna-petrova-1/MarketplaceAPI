@@ -14,26 +14,9 @@ namespace MarketplaceAPI.Domain.Services
 			_auctionsQueryProvider = auctionsQueryProvider;
 		}
 
-		public IEnumerable<Auction> GetAuctions()
+		public async Task<IEnumerable<Auction>> GetAuctions()
 		{
-			var auctions = _auctionsQueryProvider.Get()
-				.Select(x => new Auction
-				{
-					Id = x.Id,
-					ItemId = x.ItemId,
-					CreatedDt = x.CreatedDt,
-					FinishedDt = x.FinishedDt,
-					Price = x.Price,
-					MarketStatus = (Status)x.MarketStatus,
-					Seller = x.Seller,
-					Buyer = x.Buyer,
-					Item = new Item {
-						Id = x.Item.Id,
-						Name = x.Item.Name,
-						Description = x.Item.Description,
-						Metadata = x.Item.Metadata
-					}
-				});
+			var auctions = await _auctionsQueryProvider.Get();
 
 			return auctions;
 		}

@@ -5,7 +5,7 @@ namespace MarketplaceAPI.Contracts.DataAccess.QueryProviders
 {
 	public interface IAuctionsQueryProvider
 	{
-		IReadOnlyCollection<Auction> Get();
+		Task<List<Infrastructure.Models.Auction>> Get();
 	}
 }
 

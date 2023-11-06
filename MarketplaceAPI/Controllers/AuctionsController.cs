@@ -20,9 +20,9 @@ namespace MarketplaceAPI.Controllers
         }
 
         [HttpGet(Name = "GetAuctions")]
-        public IEnumerable<Auction> Get()
+        public async Task<IEnumerable<Auction>> Get()
         {
-            var auctions = _auctionsService.GetAuctions();
+            var auctions = await _auctionsService.GetAuctions();
 
             return auctions;
         }

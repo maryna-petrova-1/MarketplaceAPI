@@ -5,7 +5,7 @@ namespace MarketplaceAPI.Contracts.Domain.Services
 {
 	public interface IAuctionsService
 	{
-        IEnumerable<Auction> GetAuctions();
+        Task<IEnumerable<Auction>> GetAuctions();
     }
 }
 

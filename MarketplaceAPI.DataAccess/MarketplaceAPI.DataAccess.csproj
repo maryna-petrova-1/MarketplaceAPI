@@ -15,5 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MarketplaceAPI.Data\MarketplaceAPI.Data.csproj" />
     <ProjectReference Include="..\MarketplaceAPI.Contracts\MarketplaceAPI.Contracts.csproj" />
+    <ProjectReference Include="..\MarketplaceAPI.Infrastructure\MarketplaceAPI.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
