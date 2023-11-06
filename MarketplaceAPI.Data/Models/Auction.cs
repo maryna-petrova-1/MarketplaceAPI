@@ -10,7 +10,7 @@ namespace MarketplaceAPI.Data.Models
     }
 
     public class Auction
-	{
+    {
         public int Id { get; set; }
         public DateTime CreatedDt { get; set; }
         public DateTime FinishedDt { get; set; }

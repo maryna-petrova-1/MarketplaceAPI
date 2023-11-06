@@ -6,18 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MarketplaceAPI.DataAccess.QueryProviders
 {
-	public class AuctionsQueryProvider : IAuctionsQueryProvider
-	{
-		private readonly AuctionsContext _dbContext;
+    public class AuctionsQueryProvider : IAuctionsQueryProvider
+    {
+        private readonly AuctionsContext _dbContext;
 
-		public AuctionsQueryProvider(AuctionsContext dbContext)
-		{
-			_dbContext = dbContext;
-		}
+        public AuctionsQueryProvider(AuctionsContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
 
-		public async Task<List<Infrastructure.Models.Auction>> Get()
-		{
-			return await _dbContext.Auctions
+        public async Task<List<Infrastructure.Models.Auction>> Get()
+        {
+            return await _dbContext.Auctions
                 .Select(x => new Infrastructure.Models.Auction
                 {
                     Id = x.Id,
@@ -36,8 +36,8 @@ namespace MarketplaceAPI.DataAccess.QueryProviders
                         Metadata = x.Item.Metadata
                     }
                 })
-				.ToListAsync();
-		}
+                .ToListAsync();
+        }
 
         public async Task<List<Infrastructure.Models.Auction>> Get(QueryObject queryObject)
         {

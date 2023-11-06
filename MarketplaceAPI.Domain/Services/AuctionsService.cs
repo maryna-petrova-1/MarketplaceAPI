@@ -6,21 +6,21 @@ using MarketplaceAPI.Infrastructure;
 
 namespace MarketplaceAPI.Domain.Services
 {
-	public class AuctionsService : IAuctionsService
-	{
-		private readonly IAuctionsQueryProvider _auctionsQueryProvider;
+    public class AuctionsService : IAuctionsService
+    {
+        private readonly IAuctionsQueryProvider _auctionsQueryProvider;
 
-		public AuctionsService(IAuctionsQueryProvider auctionsQueryProvider)
-		{
-			_auctionsQueryProvider = auctionsQueryProvider;
-		}
+        public AuctionsService(IAuctionsQueryProvider auctionsQueryProvider)
+        {
+            _auctionsQueryProvider = auctionsQueryProvider;
+        }
 
-		public async Task<IEnumerable<Auction>> GetAuctions()
-		{
-			var auctions = await _auctionsQueryProvider.Get();
+        public async Task<IEnumerable<Auction>> GetAuctions()
+        {
+            var auctions = await _auctionsQueryProvider.Get();
 
-			return auctions;
-		}
+            return auctions;
+        }
 
         public async Task<IEnumerable<Auction>> GetAuctions(QueryObject queryObject)
         {

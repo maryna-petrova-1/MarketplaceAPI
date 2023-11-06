@@ -1,6 +1,4 @@
-﻿using System;
-using MarketplaceAPI.Data.Models;
-using MarketplaceAPI.Infrastructure;
+﻿using MarketplaceAPI.Infrastructure;
 
 namespace MarketplaceAPI.Contracts.DataAccess.QueryProviders
 {
@@ -9,7 +7,6 @@ namespace MarketplaceAPI.Contracts.DataAccess.QueryProviders
 		Task<List<Infrastructure.Models.Auction>> Get();
 
 		Task<List<Infrastructure.Models.Auction>> Get(QueryObject queryObject);
-
-    }
+	}
 }
 
