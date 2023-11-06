@@ -2,11 +2,11 @@
 
 namespace MarketplaceAPI.Contracts.DataAccess.QueryProviders
 {
-	public interface IAuctionsQueryProvider
-	{
-		Task<List<Infrastructure.Models.Auction>> Get();
+    public interface IAuctionsQueryProvider
+    {
+        Task<List<Infrastructure.Models.Auction>> Get();
 
-		Task<List<Infrastructure.Models.Auction>> Get(QueryObject queryObject);
-	}
+        Task<List<Infrastructure.Models.Auction>> Get(QueryObject queryObject);
+    }
 }
 
